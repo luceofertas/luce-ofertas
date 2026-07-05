@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -23,15 +23,17 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
-    <div class="container header-container">
+    <div class="container header">
 
         <a href="#" class="logo">
 
-            <span class="logo-destaque">Luce</span>
+            <span class="logo-rosa">Luce</span>
 
-            <span class="logo-texto">Ofertas</span>
+            <span class="logo-preto">Ofertas</span>
 
         </a>
 
@@ -41,20 +43,20 @@
 
             <input
                 type="text"
-                placeholder="O que você procura hoje?"
+                placeholder="Pesquise um produto..."
             >
 
         </div>
 
-        <div class="header-acoes">
+        <div class="acoes">
 
-            <button class="icone-btn" aria-label="Favoritos">
+            <button class="botao-icone">
 
                 <i data-lucide="heart"></i>
 
             </button>
 
-            <button class="icone-btn" aria-label="Menu">
+            <button class="botao-icone">
 
                 <i data-lucide="menu"></i>
 
@@ -66,11 +68,13 @@
 
 </header>
 
-<section class="barra-transparencia">
+<!-- ================= TRANSPARÊNCIA ================= -->
 
-    <div class="container barra-container">
+<section class="transparencia">
 
-        <div class="info">
+    <div class="container transparencia-grid">
+
+        <div class="item-transparencia">
 
             <i data-lucide="badge-check"></i>
 
@@ -78,15 +82,15 @@
 
         </div>
 
-        <div class="info">
+        <div class="item-transparencia">
 
-            <i data-lucide="store"></i>
+            <i data-lucide="shopping-bag"></i>
 
             <span>Links oficiais da Shopee</span>
 
         </div>
 
-        <div class="info">
+        <div class="item-transparencia">
 
             <i data-lucide="shield-check"></i>
 
@@ -98,9 +102,11 @@
 
 </section>
 
+<!-- ================= CATEGORIAS ================= -->
+
 <nav class="categorias">
 
-    <div class="container categorias-container">
+    <div class="container categorias-grid">
 
         <button>
 
@@ -146,13 +152,15 @@
 
 </nav>
 
+<!-- ================= BANNER ================= -->
+
 <section class="banner">
 
-    <div class="container banner-container">
+    <div class="container banner-grid">
 
         <div class="banner-texto">
 
-            <span class="mini-titulo">
+            <span class="mini">
 
                 LUCE OFERTAS
 
@@ -167,20 +175,20 @@
             <p>
 
                 Selecionamos produtos com bom custo-benefício,
-                boas avaliações e vendedores confiáveis para
-                facilitar sua busca.
+                boas avaliações e vendedores confiáveis
+                para facilitar sua busca.
 
             </p>
 
-            <div class="banner-botoes">
+            <div class="botoes-banner">
 
-                <a href="#" class="btn-principal">
+                <a href="#" class="botao-principal">
 
                     Ver ofertas
 
                 </a>
 
-                <a href="#" class="btn-secundario">
+                <a href="#" class="botao-secundario">
 
                     Como funciona
 
@@ -192,7 +200,7 @@
 
         <div class="banner-card">
 
-            <div class="banner-card-topo">
+            <div class="titulo-card">
 
                 <i data-lucide="sparkles"></i>
 
@@ -202,15 +210,16 @@
 
             <h3>
 
-                Apenas ofertas que chamaram nossa atenção.
+                Menos tempo procurando.
+                Mais tempo aproveitando.
 
             </h3>
 
             <p>
 
-                Nosso objetivo é economizar o seu tempo.
-                Você encontra aqui produtos escolhidos com
-                critério e transparência.
+                Aqui você encontra ofertas escolhidas
+                manualmente com foco em qualidade,
+                organização e transparência.
 
             </p>
 
@@ -220,11 +229,13 @@
 
 </section>
 
-<section class="escolha-luce">
+<!-- ================= ESCOLHA DA LUCE ================= -->
+
+<section class="escolha">
 
     <div class="container">
 
-        <div class="titulo-central">
+        <div class="titulo-centro">
 
             <h2>
 
@@ -234,16 +245,17 @@
 
             <p>
 
-                Antes de divulgar uma oferta, analisamos o produto,
-                a reputação da loja e o custo-benefício.
+                Antes de divulgar um produto,
+                verificamos avaliações, loja
+                e custo-benefício.
 
             </p>
 
         </div>
 
-        <div class="vantagens-grid">
+        <div class="cards-escolha">
 
-            <div class="vantagem-card">
+            <div class="card-escolha">
 
                 <i data-lucide="circle-check-big"></i>
 
@@ -255,13 +267,13 @@
 
                 <p>
 
-                    Cada oferta é escolhida manualmente.
+                    Produtos escolhidos um a um.
 
                 </p>
 
             </div>
 
-            <div class="vantagem-card">
+            <div class="card-escolha">
 
                 <i data-lucide="star"></i>
 
@@ -273,12 +285,12 @@
 
                 <p>
 
-                    Priorizamos produtos com boas avaliações.
+                    Priorizamos boas avaliações.
 
                 </p>
 
             </div>
-                        <div class="vantagem-card">
+                        <div class="card-escolha">
 
                 <i data-lucide="badge-percent"></i>
 
@@ -296,7 +308,7 @@
 
             </div>
 
-            <div class="vantagem-card">
+            <div class="card-escolha">
 
                 <i data-lucide="shield-check"></i>
 
@@ -308,7 +320,9 @@
 
                 <p>
 
-                    Alguns links são de afiliados, sem custo adicional para você.
+                    Alguns links deste site são links de afiliados.
+                    Caso você compre através deles, podemos receber
+                    uma pequena comissão sem custo adicional para você.
 
                 </p>
 
@@ -320,27 +334,39 @@
 
 </section>
 
+<!-- ================= PRODUTOS ================= -->
+
 <section class="produtos">
 
     <div class="container">
 
-        <div class="titulo-secao">
+        <div class="topo-secao">
 
-            <h2>Promoções do Dia</h2>
+            <h2>
 
-            <a href="#">Ver todas</a>
+                Promoções do Dia
+
+            </h2>
+
+            <a href="#">
+
+                Ver todas
+
+            </a>
 
         </div>
 
-        <div class="grade-produtos">
+        <div class="grid-produtos">
 
-            <article class="card-produto">
+            <!-- PRODUTO 1 -->
 
-                <div class="imagem-produto">
+            <article class="produto">
+
+                <div class="produto-imagem">
 
                     <img src="imagens/produto1.jpg" alt="Produto">
 
-                    <button class="favorito-card">
+                    <button class="favorito">
 
                         <i data-lucide="heart"></i>
 
@@ -348,9 +374,9 @@
 
                 </div>
 
-                <div class="conteudo-card">
+                <div class="produto-info">
 
-                    <span class="tag-card">
+                    <span class="selo">
 
                         Escolha da Luce
 
@@ -358,11 +384,11 @@
 
                     <h3>
 
-                        Nome do produto
+                        Nome do Produto
 
                     </h3>
 
-                    <div class="avaliacao">
+                    <div class="nota">
 
                         <i data-lucide="star"></i>
 
@@ -372,13 +398,13 @@
 
                     <div class="precos">
 
-                        <span class="preco-antigo">
+                        <span class="antigo">
 
-                            R$ 59,90
+                            R$ 69,90
 
                         </span>
 
-                        <span class="preco">
+                        <span class="atual">
 
                             R$ 39,90
 
@@ -386,13 +412,13 @@
 
                     </div>
 
-                    <p class="loja">
+                    <span class="loja">
 
                         Loja Oficial
 
-                    </p>
+                    </span>
 
-                    <a href="#" class="btn-card">
+                    <a href="#" class="btn-produto">
 
                         Ver detalhes
 
@@ -402,13 +428,15 @@
 
             </article>
 
-            <article class="card-produto">
+            <!-- PRODUTO 2 -->
 
-                <div class="imagem-produto">
+            <article class="produto">
+
+                <div class="produto-imagem">
 
                     <img src="imagens/produto2.jpg" alt="Produto">
 
-                    <button class="favorito-card">
+                    <button class="favorito">
 
                         <i data-lucide="heart"></i>
 
@@ -416,9 +444,9 @@
 
                 </div>
 
-                <div class="conteudo-card">
+                <div class="produto-info">
 
-                    <span class="tag-card">
+                    <span class="selo">
 
                         Escolha da Luce
 
@@ -426,11 +454,11 @@
 
                     <h3>
 
-                        Nome do produto
+                        Nome do Produto
 
                     </h3>
 
-                    <div class="avaliacao">
+                    <div class="nota">
 
                         <i data-lucide="star"></i>
 
@@ -440,27 +468,27 @@
 
                     <div class="precos">
 
-                        <span class="preco-antigo">
+                        <span class="antigo">
 
-                            R$ 79,90
+                            R$ 99,90
 
                         </span>
 
-                        <span class="preco">
+                        <span class="atual">
 
-                            R$ 49,90
+                            R$ 69,90
 
                         </span>
 
                     </div>
 
-                    <p class="loja">
+                    <span class="loja">
 
                         Loja Oficial
 
-                    </p>
+                    </span>
 
-                    <a href="#" class="btn-card">
+                    <a href="#" class="btn-produto">
 
                         Ver detalhes
 
@@ -470,13 +498,15 @@
 
             </article>
 
-            <article class="card-produto">
+            <!-- PRODUTO 3 -->
 
-                <div class="imagem-produto">
+            <article class="produto">
+
+                <div class="produto-imagem">
 
                     <img src="imagens/produto3.jpg" alt="Produto">
 
-                    <button class="favorito-card">
+                    <button class="favorito">
 
                         <i data-lucide="heart"></i>
 
@@ -484,9 +514,9 @@
 
                 </div>
 
-                <div class="conteudo-card">
+                <div class="produto-info">
 
-                    <span class="tag-card">
+                    <span class="selo">
 
                         Escolha da Luce
 
@@ -494,11 +524,11 @@
 
                     <h3>
 
-                        Nome do produto
+                        Nome do Produto
 
                     </h3>
 
-                    <div class="avaliacao">
+                    <div class="nota">
 
                         <i data-lucide="star"></i>
 
@@ -508,27 +538,27 @@
 
                     <div class="precos">
 
-                        <span class="preco-antigo">
+                        <span class="antigo">
 
-                            R$ 99,90
+                            R$ 129,90
 
                         </span>
 
-                        <span class="preco">
+                        <span class="atual">
 
-                            R$ 69,90
+                            R$ 84,90
 
                         </span>
 
                     </div>
 
-                    <p class="loja">
+                    <span class="loja">
 
                         Loja Oficial
 
-                    </p>
+                    </span>
 
-                    <a href="#" class="btn-card">
+                    <a href="#" class="btn-produto">
 
                         Ver detalhes
 
@@ -544,16 +574,17 @@
 
 </section>
 
+<!-- ================= RODAPÉ ================= -->
+
 <footer>
 
-    <div class="container footer-container">
+    <div class="container footer">
 
         <p>
 
-            Alguns links deste site são links de afiliados.
-            Caso você realize uma compra através deles,
-            poderemos receber uma pequena comissão,
-            sem custo adicional para você.
+            Transparência: alguns links deste site são links de afiliados.
+            Caso você realize uma compra através deles, poderemos receber
+            uma pequena comissão sem qualquer custo adicional para você.
 
         </p>
 

@@ -1,6 +1,6 @@
-/*======================================
-RESET
-======================================*/
+/* ===================================================
+   RESET
+=================================================== */
 
 *{
     margin:0;
@@ -11,12 +11,20 @@ RESET
 :root{
 
     --rosa:#ff4f87;
-    --rosa-claro:#fff2f7;
-    --cinza:#f6f7fb;
-    --texto:#2f2f2f;
-    --texto-claro:#777;
-    --borda:#ececec;
+    --rosa-hover:#ff2d72;
+    --rosa-claro:#fff4f8;
+
     --branco:#ffffff;
+
+    --cinza:#f6f7fb;
+    --cinza2:#eceef3;
+
+    --texto:#272727;
+    --texto2:#6c6c6c;
+
+    --sombra:0 12px 35px rgba(0,0,0,.07);
+
+    --borda:18px;
 
 }
 
@@ -28,19 +36,19 @@ html{
 
 body{
 
-    font-family:'Poppins',sans-serif;
-
     background:var(--cinza);
 
     color:var(--texto);
+
+    font-family:'Poppins',sans-serif;
 
 }
 
 img{
 
-    display:block;
-
     width:100%;
+
+    display:block;
 
 }
 
@@ -60,19 +68,21 @@ button{
 
 .container{
 
-    width:min(1200px,92%);
+    width:min(1220px,92%);
 
     margin:auto;
 
 }
 
-/*======================================
-HEADER
-======================================*/
+/* ===================================================
+   HEADER
+=================================================== */
 
 header{
 
-    background:white;
+    background:var(--branco);
+
+    border-bottom:1px solid var(--cinza2);
 
     position:sticky;
 
@@ -80,11 +90,9 @@ header{
 
     z-index:999;
 
-    border-bottom:1px solid var(--borda);
-
 }
 
-.header-container{
+.header{
 
     height:82px;
 
@@ -94,7 +102,7 @@ header{
 
     justify-content:space-between;
 
-    gap:25px;
+    gap:30px;
 
 }
 
@@ -102,21 +110,25 @@ header{
 
     display:flex;
 
-    gap:8px;
-
     align-items:center;
 
-    font-size:28px;
+    gap:6px;
+
+    font-size:30px;
 
     font-weight:700;
 
-    color:var(--texto);
+}
+
+.logo-rosa{
+
+    color:var(--rosa);
 
 }
 
-.logo-destaque{
+.logo-preto{
 
-    color:var(--rosa);
+    color:var(--texto);
 
 }
 
@@ -138,9 +150,9 @@ header{
 
     transform:translateY(-50%);
 
-    width:20px;
+    width:19px;
 
-    height:20px;
+    height:19px;
 
     color:#999;
 
@@ -150,13 +162,13 @@ header{
 
     width:100%;
 
-    height:50px;
+    height:52px;
 
     border:none;
 
     outline:none;
 
-    background:#f2f3f7;
+    background:#f3f4f8;
 
     border-radius:50px;
 
@@ -164,7 +176,7 @@ header{
 
     padding-right:20px;
 
-    font-size:15px;
+    transition:.25s;
 
 }
 
@@ -172,19 +184,19 @@ header{
 
     background:white;
 
-    box-shadow:0 0 0 3px rgba(255,79,135,.15);
+    box-shadow:0 0 0 3px rgba(255,79,135,.18);
 
 }
 
-.header-acoes{
+.acoes{
 
     display:flex;
 
-    gap:10px;
+    gap:12px;
 
 }
 
-.icone-btn{
+.botao-icone{
 
     width:46px;
 
@@ -196,29 +208,27 @@ header{
 
     background:white;
 
-    border:1px solid var(--borda);
+    border:1px solid var(--cinza2);
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
     transition:.25s;
 
 }
 
-.icone-btn:hover{
+.botao-icone:hover{
 
     background:var(--rosa);
 
     color:white;
 
-    border-color:var(--rosa);
-
 }
 
-.icone-btn svg{
+.botao-icone svg{
 
     width:20px;
 
@@ -226,25 +236,25 @@ header{
 
 }
 
-/*======================================
-BARRA
-======================================*/
+/* ===================================================
+   TRANSPARÊNCIA
+=================================================== */
 
-.barra-transparencia{
+.transparencia{
 
     background:white;
 
-    border-bottom:1px solid var(--borda);
+    border-bottom:1px solid var(--cinza2);
 
 }
 
-.barra-container{
+.transparencia-grid{
 
     display:flex;
 
     justify-content:center;
 
-    gap:40px;
+    gap:45px;
 
     padding:18px 0;
 
@@ -252,7 +262,7 @@ BARRA
 
 }
 
-.info{
+.item-transparencia{
 
     display:flex;
 
@@ -260,25 +270,25 @@ BARRA
 
     gap:10px;
 
-    font-size:14px;
+    color:var(--texto2);
 
-    color:#555;
+    font-size:14px;
 
 }
 
-.info svg{
-
-    color:var(--rosa);
+.item-transparencia svg{
 
     width:20px;
 
     height:20px;
 
+    color:var(--rosa);
+
 }
 
-/*======================================
-CATEGORIAS
-======================================*/
+/* ===================================================
+   CATEGORIAS
+=================================================== */
 
 .categorias{
 
@@ -286,19 +296,19 @@ CATEGORIAS
 
 }
 
-.categorias-container{
+.categorias-grid{
 
     display:flex;
 
-    gap:16px;
+    gap:14px;
 
     overflow:auto;
 
-    padding:20px 0;
+    padding:22px 0;
 
 }
 
-.categorias-container::-webkit-scrollbar{
+.categorias-grid::-webkit-scrollbar{
 
     display:none;
 
@@ -312,13 +322,13 @@ CATEGORIAS
 
     gap:10px;
 
-    padding:14px 22px;
-
     border:none;
 
-    border-radius:50px;
-
     background:#fafafa;
+
+    padding:13px 22px;
+
+    border-radius:999px;
 
     transition:.25s;
 
@@ -330,9 +340,9 @@ CATEGORIAS
 
 .categorias button svg{
 
-    width:20px;
+    width:18px;
 
-    height:20px;
+    height:18px;
 
     color:var(--rosa);
 
@@ -352,9 +362,9 @@ CATEGORIAS
 
 }
 
-/*======================================
-BANNER
-======================================*/
+/* ===================================================
+   BANNER
+=================================================== */
 
 .banner{
 
@@ -362,7 +372,7 @@ BANNER
 
 }
 
-.banner-container{
+.banner-grid{
 
     display:grid;
 
@@ -374,41 +384,45 @@ BANNER
 
 }
 
-.mini-titulo{
+.mini{
+
+    display:inline-block;
 
     color:var(--rosa);
+
+    font-size:13px;
 
     font-weight:700;
 
     letter-spacing:2px;
 
-    font-size:13px;
+    margin-bottom:18px;
 
 }
 
 .banner h1{
 
-    font-size:52px;
+    font-size:54px;
 
     line-height:1.15;
 
-    margin:18px 0;
+    margin-bottom:22px;
 
 }
 
 .banner p{
 
-    color:#666;
-
     font-size:18px;
 
-    line-height:1.8;
+    color:var(--texto2);
 
-    max-width:650px;
+    line-height:1.9;
+
+    max-width:620px;
 
 }
 
-.banner-botoes{
+.botoes-banner{
 
     display:flex;
 
@@ -418,33 +432,49 @@ BANNER
 
 }
 
-.btn-principal{
+.botao-principal{
 
     background:var(--rosa);
 
     color:white;
 
-    padding:15px 28px;
+    padding:16px 28px;
 
-    border-radius:50px;
+    border-radius:999px;
 
     font-weight:600;
+
+    transition:.25s;
 
 }
 
-.btn-secundario{
+.botao-principal:hover{
+
+    background:var(--rosa-hover);
+
+}
+
+.botao-secundario{
 
     background:white;
 
-    color:#555;
+    color:var(--texto);
 
-    border:1px solid var(--borda);
+    border:1px solid var(--cinza2);
 
-    padding:15px 28px;
+    padding:16px 28px;
 
-    border-radius:50px;
+    border-radius:999px;
 
-    font-weight:600;
+    transition:.25s;
+
+}
+
+.botao-secundario:hover{
+
+    border-color:var(--rosa);
+
+    color:var(--rosa);
 
 }
 
@@ -456,11 +486,11 @@ BANNER
 
     padding:35px;
 
-    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    box-shadow:var(--sombra);
 
 }
 
-.banner-card-topo{
+.titulo-card{
 
     display:flex;
 
@@ -472,11 +502,11 @@ BANNER
 
     font-weight:600;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
 }
 
-.banner-card-topo svg{
+.titulo-card svg{
 
     width:22px;
 
@@ -484,17 +514,35 @@ BANNER
 
 }
 
-/*======================================
-ESCOLHA DA LUCE
-======================================*/
+.banner-card h3{
 
-.escolha-luce{
+    font-size:26px;
 
-    padding:30px 0 60px;
+    line-height:1.35;
+
+    margin-bottom:16px;
 
 }
 
-.titulo-central{
+.banner-card p{
+
+    color:var(--texto2);
+
+    line-height:1.8;
+
+}
+
+/* ===================================================
+   ESCOLHA DA LUCE
+=================================================== */
+
+.escolha{
+
+    padding:10px 0 70px;
+
+}
+
+.titulo-centro{
 
     text-align:center;
 
@@ -502,19 +550,19 @@ ESCOLHA DA LUCE
 
 }
 
-.titulo-central h2{
+.titulo-centro h2{
 
     font-size:38px;
 
-    margin-bottom:12px;
+    margin-bottom:15px;
 
 }
 
-.titulo-central p{
+.titulo-centro p{
 
-    color:var(--texto-claro);
+    color:var(--texto2);
 
-    max-width:700px;
+    max-width:650px;
 
     margin:auto;
 
@@ -522,7 +570,7 @@ ESCOLHA DA LUCE
 
 }
 
-.vantagens-grid{
+.cards-escolha{
 
     display:grid;
 
@@ -532,7 +580,7 @@ ESCOLHA DA LUCE
 
 }
 
-.vantagem-card{
+.card-escolha{
 
     background:white;
 
@@ -542,21 +590,19 @@ ESCOLHA DA LUCE
 
     text-align:center;
 
-    transition:.30s;
+    box-shadow:var(--sombra);
 
-    border:1px solid var(--borda);
+    transition:.25s;
 
 }
 
-.vantagem-card:hover{
+.card-escolha:hover{
 
     transform:translateY(-8px);
 
-    box-shadow:0 18px 35px rgba(0,0,0,.08);
-
 }
 
-.vantagem-card svg{
+.card-escolha svg{
 
     width:42px;
 
@@ -564,37 +610,35 @@ ESCOLHA DA LUCE
 
     color:var(--rosa);
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
 }
 
-.vantagem-card h3{
+.card-escolha h3{
 
-    margin-bottom:10px;
-
-    font-size:20px;
+    margin-bottom:12px;
 
 }
 
-.vantagem-card p{
+.card-escolha p{
 
-    color:var(--texto-claro);
+    color:var(--texto2);
 
     line-height:1.7;
 
 }
 
-/*======================================
-PRODUTOS
-======================================*/
+/* ===================================================
+   PRODUTOS
+=================================================== */
 
 .produtos{
 
-    padding:20px 0 80px;
+    padding-bottom:80px;
 
 }
 
-.titulo-secao{
+.topo-secao{
 
     display:flex;
 
@@ -606,13 +650,13 @@ PRODUTOS
 
 }
 
-.titulo-secao h2{
+.topo-secao h2{
 
     font-size:34px;
 
 }
 
-.titulo-secao a{
+.topo-secao a{
 
     color:var(--rosa);
 
@@ -620,17 +664,17 @@ PRODUTOS
 
 }
 
-.grade-produtos{
+.grid-produtos{
 
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:30px;
+    gap:28px;
 
 }
 
-.card-produto{
+.produto{
 
     background:white;
 
@@ -638,21 +682,19 @@ PRODUTOS
 
     overflow:hidden;
 
-    transition:.30s;
+    box-shadow:var(--sombra);
 
-    border:1px solid var(--borda);
+    transition:.30s;
 
 }
 
-.card-produto:hover{
+.produto:hover{
 
     transform:translateY(-8px);
 
-    box-shadow:0 20px 40px rgba(0,0,0,.08);
-
 }
 
-.imagem-produto{
+.produto-imagem{
 
     position:relative;
 
@@ -660,15 +702,15 @@ PRODUTOS
 
 }
 
-.imagem-produto img{
+.produto-imagem img{
 
-    height:280px;
+    height:270px;
 
     object-fit:cover;
 
 }
 
-.favorito-card{
+.favorito{
 
     position:absolute;
 
@@ -676,9 +718,9 @@ PRODUTOS
 
     right:16px;
 
-    width:42px;
+    width:44px;
 
-    height:42px;
+    height:44px;
 
     border:none;
 
@@ -692,11 +734,11 @@ PRODUTOS
 
     align-items:center;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
 
-.favorito-card svg{
+.favorito svg{
 
     width:18px;
 
@@ -706,23 +748,23 @@ PRODUTOS
 
 }
 
-.conteudo-card{
+.produto-info{
 
     padding:24px;
 
 }
 
-.tag-card{
+.selo{
 
-    display:inline-flex;
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:999px;
 
     background:var(--rosa-claro);
 
     color:var(--rosa);
-
-    padding:8px 14px;
-
-    border-radius:30px;
 
     font-size:13px;
 
@@ -732,17 +774,17 @@ PRODUTOS
 
 }
 
-.conteudo-card h3{
+.produto-info h3{
 
     font-size:20px;
 
-    margin-bottom:15px;
-
     line-height:1.4;
+
+    margin-bottom:16px;
 
 }
 
-.avaliacao{
+.nota{
 
     display:flex;
 
@@ -754,7 +796,7 @@ PRODUTOS
 
 }
 
-.avaliacao svg{
+.nota svg{
 
     width:18px;
 
@@ -772,23 +814,23 @@ PRODUTOS
 
     flex-direction:column;
 
-    gap:5px;
+    gap:4px;
 
     margin-bottom:18px;
 
 }
 
-.preco-antigo{
-
-    color:#999;
+.antigo{
 
     text-decoration:line-through;
+
+    color:#9b9b9b;
 
     font-size:15px;
 
 }
 
-.preco{
+.atual{
 
     font-size:32px;
 
@@ -800,13 +842,15 @@ PRODUTOS
 
 .loja{
 
-    color:var(--texto-claro);
+    display:block;
+
+    color:var(--texto2);
 
     margin-bottom:22px;
 
 }
 
-.btn-card{
+.btn-produto{
 
     display:flex;
 
@@ -820,7 +864,7 @@ PRODUTOS
 
     color:white;
 
-    border-radius:50px;
+    border-radius:999px;
 
     font-weight:600;
 
@@ -828,141 +872,118 @@ PRODUTOS
 
 }
 
-.btn-card:hover{
+.btn-produto:hover{
 
-    opacity:.92;
+    background:var(--rosa-hover);
 
 }
 
-/*======================================
-FOOTER
-======================================*/
+/* ===================================================
+   FOOTER
+=================================================== */
 
 footer{
 
     background:white;
 
-    border-top:1px solid var(--borda);
+    border-top:1px solid var(--cinza2);
 
 }
 
-.footer-container{
+.footer{
 
-    padding:40px 0;
+    padding:45px 0;
 
     text-align:center;
 
 }
 
-.footer-container p{
+.footer p{
 
-    color:var(--texto-claro);
+    color:var(--texto2);
 
     line-height:1.8;
 
-    max-width:750px;
+    max-width:760px;
 
     margin:10px auto;
 
 }
 
-/*======================================
-RESPONSIVO
-======================================*/
+/* ===================================================
+   RESPONSIVO
+=================================================== */
 
-@media(max-width:992px){
+@media(max-width:1000px){
 
-.banner-container{
+    .banner-grid{
 
-    grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-}
+    }
 
-.vantagens-grid{
+    .cards-escolha{
 
-    grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
 
-}
+    }
 
-.grade-produtos{
+    .grid-produtos{
 
-    grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
 
-}
+    }
 
 }
 
 @media(max-width:768px){
 
-.header-container{
+    .header{
 
-    flex-wrap:wrap;
+        flex-wrap:wrap;
 
-    height:auto;
+        height:auto;
 
-    padding:20px 0;
+        padding:20px 0;
 
-}
+    }
 
-.logo{
+    .logo{
 
-    width:100%;
+        width:100%;
 
-    justify-content:center;
+        justify-content:center;
 
-}
+    }
 
-.pesquisa{
+    .pesquisa{
 
-    width:100%;
+        width:100%;
 
-}
+    }
 
-.header-acoes{
+    .banner h1{
 
-    margin-left:auto;
+        font-size:38px;
 
-}
+    }
 
-.banner h1{
+    .botoes-banner{
 
-    font-size:36px;
+        flex-direction:column;
 
-}
+    }
 
-.banner-botoes{
+    .cards-escolha{
 
-    flex-direction:column;
+        grid-template-columns:1fr;
 
-}
+    }
 
-.btn-principal,
-.btn-secundario{
+    .grid-produtos{
 
-    text-align:center;
+        grid-template-columns:1fr;
 
-}
-
-.vantagens-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.grade-produtos{
-
-    grid-template-columns:1fr;
-
-}
-
-.titulo-secao{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:12px;
-
-}
+    }
 
 }
