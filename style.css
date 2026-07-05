@@ -1,3 +1,7 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -5,61 +9,344 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f8f8f8;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f5f6fa;
+
     color:#333;
+
 }
 
+
+/* ===========================
+   CABEÇALHO
+=========================== */
+
 header{
-    background:white;
-    padding:20px;
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    justify-content:space-between;
+
+    gap:20px;
+
+    background:white;
+
+    padding:18px 40px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
 }
 
 .logo{
+
     font-size:30px;
+
     font-weight:bold;
-    color:#ff4f87;
+
+    white-space:nowrap;
+
 }
 
-.menu{
-    font-size:26px;
-    cursor:pointer;
+.logo span{
+
+    color:#ff4f87;
+
 }
+
+.pesquisa{
+
+    flex:1;
+
+}
+
+.pesquisa input{
+
+    width:100%;
+
+    padding:16px 22px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#f1f2f6;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+.pesquisa input:focus{
+
+    background:white;
+
+    box-shadow:0 0 0 3px #ffd7e5;
+
+}
+
+.acoes{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.acoes button{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff4f87;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.acoes button:hover{
+
+    transform:scale(1.08);
+
+    background:#ff2d6d;
+
+}
+
+
+/* ===========================
+   BARRA INFORMAÇÕES
+=========================== */
+
+.informacoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+    padding:16px;
+
+    background:white;
+
+    border-bottom:1px solid #ececec;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.informacoes div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+/* ===========================
+   CATEGORIAS
+=========================== */
+
+.categorias{
+
+    max-width:1300px;
+
+    margin:30px auto;
+
+    display:flex;
+
+    gap:15px;
+
+    overflow:auto;
+
+    padding:0 20px 10px;
+
+}
+
+.categorias::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.categorias::-webkit-scrollbar-thumb{
+
+    background:#ffd5e4;
+
+    border-radius:50px;
+
+}
+
+.categorias button{
+
+    border:none;
+
+    background:white;
+
+    padding:14px 22px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.categorias button:hover{
+
+    background:#ff4f87;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ===========================
+   BANNER
+=========================== */
 
 .banner{
-    max-width:1200px;
-    margin:30px auto;
-    background:linear-gradient(135deg,#ffd6e5,#ffffff);
-    border-radius:20px;
-    padding:60px 40px;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+    padding:70px;
+
+    border-radius:25px;
+
+    background:linear-gradient(135deg,#ffd7e5,#fff);
+
 }
 
 .banner h1{
-    font-size:45px;
+
+    font-size:55px;
+
     color:#ff4f87;
+
+    margin-bottom:20px;
+
 }
 
 .banner p{
-    margin-top:15px;
-    font-size:20px;
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
 }
 
 .botao{
+
     display:inline-block;
-    margin-top:30px;
+
     background:#ff4f87;
+
     color:white;
+
     text-decoration:none;
-    padding:15px 35px;
-    border-radius:50px;
+
+    padding:18px 38px;
+
+    border-radius:40px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
 .botao:hover{
+
     background:#ff2d6d;
+
+}
+
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+header{
+
+    flex-wrap:wrap;
+
+    padding:20px;
+
+}
+
+.logo{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.pesquisa{
+
+    order:3;
+
+    width:100%;
+
+}
+
+.banner{
+
+    padding:35px;
+
+}
+
+.banner h1{
+
+    font-size:34px;
+
+}
+
+.banner p{
+
+    font-size:18px;
+
+}
+
 }
