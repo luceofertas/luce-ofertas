@@ -2,7 +2,7 @@ const produtos = [
 
 {
     id:1,
-    nome:"Escova Limpa Sapato com Dispenser",
+    nome:"Escova Limpa Sapato",
     preco:"R$ 10,90",
     precoAntigo:"R$ 22,90",
     nota:"4.9",
