@@ -9,7 +9,7 @@ const produtos = [
     loja:"Loja Oficial",
     categoria:"Casa",
     imagem:"imagens/escova.jpg",
-    link:"produto.html"
+    link:"produto.html?id=1"
 },
 
 {
@@ -21,7 +21,7 @@ const produtos = [
     loja:"Loja Oficial",
     categoria:"Casa",
     imagem:"imagens/gaveta.jpg",
-    link:"produto.html"
+    link:"produto.html?id=2"
 },
 
 {
@@ -33,7 +33,7 @@ const produtos = [
     loja:"Loja Oficial",
     categoria:"Casa",
     imagem:"imagens/escorredor.jpg",
-    link:"produto.html"
+    link:"produto.html?id=3"
 }
 
 ];
@@ -134,3 +134,14 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 });
 
+function obterParametro(nome){
+
+    const parametros = new URLSearchParams(window.location.search);
+
+    return parametros.get(nome);
+
+}
+
+const idProduto = obterParametro("id");
+
+console.log("Produto selecionado:", idProduto);
