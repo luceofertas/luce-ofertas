@@ -2,130 +2,95 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Luce Ofertas</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
+<header>
 
-    <header>
+    <div class="container header-container">
 
-        <div class="logo">
-            🛍️ <span>Luce</span> Ofertas
-        </div>
+        <a href="#" class="logo">
+
+            <span class="logo-destaque">Luce</span>
+
+            <span class="logo-texto">Ofertas</span>
+
+        </a>
 
         <div class="pesquisa">
-            <input type="text" placeholder="O que você procura hoje?">
+
+            <i data-lucide="search"></i>
+
+            <input
+                type="text"
+                placeholder="O que você procura hoje?"
+            >
+
         </div>
 
-        <div class="acoes">
-            <button class="favorito">❤</button>
-            <button class="menu">☰</button>
+        <div class="header-acoes">
+
+            <button class="icone-btn" aria-label="Favoritos">
+
+                <i data-lucide="heart"></i>
+
+            </button>
+
+            <button class="icone-btn" aria-label="Menu">
+
+                <i data-lucide="menu"></i>
+
+            </button>
+
         </div>
 
-    </header>
-
-    <!-- BARRA DE INFORMAÇÕES -->
-
-    <section class="informacoes">
-
-        <div>✔ Ofertas verificadas</div>
-
-        <div>🚚 Frete grátis</div>
-
-        <div>🎟 Cupons atualizados</div>
-
-        <div>❤️ Transparência total</div>
-
-    </section>
-    <section class="produtos">
-
-    <div class="titulo-secao">
-        🔥 Ofertas do dia
     </div>
 
-    <div class="grade-produtos">
+</header>
 
-        <div class="card-produto">
+<section class="barra-transparencia">
 
-            <img src="https://placehold.co/400x400/png" alt="Produto">
+    <div class="container barra-container">
 
-            <div class="nome-produto">
-                Escova Limpa Sapato com Dispenser
-            </div>
+        <div class="info">
 
-            <div class="avaliacao">
-                ⭐⭐⭐⭐⭐ (4,9)
-            </div>
+            <i data-lucide="badge-check"></i>
 
-            <div class="preco-antigo">
-                R$ 22,90
-            </div>
-
-            <div class="preco">
-                R$ 10,90
-            </div>
-
-            <a href="#" class="botao-produto">
-                Ver oferta
-            </a>
+            <span>Produtos selecionados manualmente</span>
 
         </div>
 
-        <div class="card-produto">
+        <div class="info">
 
-            <img src="https://placehold.co/400x400/png" alt="Produto">
+            <i data-lucide="store"></i>
 
-            <div class="nome-produto">
-                Organizador de Gaveta
-            </div>
-
-            <div class="avaliacao">
-                ⭐⭐⭐⭐⭐ (5,0)
-            </div>
-
-            <div class="preco-antigo">
-                R$ 39,90
-            </div>
-
-            <div class="preco">
-                R$ 17,90
-            </div>
-
-            <a href="#" class="botao-produto">
-                Ver oferta
-            </a>
+            <span>Links oficiais da Shopee</span>
 
         </div>
 
-        <div class="card-produto">
+        <div class="info">
 
-            <img src="https://placehold.co/400x400/png" alt="Produto">
+            <i data-lucide="shield-check"></i>
 
-            <div class="nome-produto">
-                Escorredor Dobrável
-            </div>
-
-            <div class="avaliacao">
-                ⭐⭐⭐⭐⭐ (4,8)
-            </div>
-
-            <div class="preco-antigo">
-                R$ 79,90
-            </div>
-
-            <div class="preco">
-                R$ 34,90
-            </div>
-
-            <a href="#" class="botao-produto">
-                Ver oferta
-            </a>
+            <span>Transparência como afiliado</span>
 
         </div>
 
@@ -133,40 +98,480 @@
 
 </section>
 
-    <!-- CATEGORIAS -->
+<nav class="categorias">
 
-    <section class="categorias">
+    <div class="container categorias-container">
 
-        <button>🔥 Ofertas</button>
-        <button>⭐ Mais vendidos</button>
-        <button>📱 Eletrônicos</button>
-        <button>🏠 Casa</button>
-        <button>💄 Beleza</button>
-        <button>👕 Moda</button>
-        <button>🐶 Pets</button>
-        <button>👶 Infantil</button>
-        <button>🍳 Cozinha</button>
-        <button>🚗 Automotivo</button>
-        <button>🎁 Presentes</button>
-        <button>💚 Promoções</button>
+        <button>
 
-    </section>
+            <i data-lucide="badge-percent"></i>
 
-    <!-- BANNER -->
+            <span>Promoções</span>
 
-    <section class="banner">
+        </button>
 
-        <h1>Achadinhos que realmente valem a pena!</h1>
+        <button>
+
+            <i data-lucide="printer"></i>
+
+            <span>Impressão 3D</span>
+
+        </button>
+
+        <button>
+
+            <i data-lucide="shirt"></i>
+
+            <span>Moda</span>
+
+        </button>
+
+        <button>
+
+            <i data-lucide="house"></i>
+
+            <span>Casa</span>
+
+        </button>
+
+        <button>
+
+            <i data-lucide="smartphone"></i>
+
+            <span>Eletrônicos</span>
+
+        </button>
+
+    </div>
+
+</nav>
+
+<section class="banner">
+
+    <div class="container banner-container">
+
+        <div class="banner-texto">
+
+            <span class="mini-titulo">
+
+                LUCE OFERTAS
+
+            </span>
+
+            <h1>
+
+                Achadinhos que realmente valem a pena.
+
+            </h1>
+
+            <p>
+
+                Selecionamos produtos com bom custo-benefício,
+                boas avaliações e vendedores confiáveis para
+                facilitar sua busca.
+
+            </p>
+
+            <div class="banner-botoes">
+
+                <a href="#" class="btn-principal">
+
+                    Ver ofertas
+
+                </a>
+
+                <a href="#" class="btn-secundario">
+
+                    Como funciona
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="banner-card">
+
+            <div class="banner-card-topo">
+
+                <i data-lucide="sparkles"></i>
+
+                <span>Escolha da Luce</span>
+
+            </div>
+
+            <h3>
+
+                Apenas ofertas que chamaram nossa atenção.
+
+            </h3>
+
+            <p>
+
+                Nosso objetivo é economizar o seu tempo.
+                Você encontra aqui produtos escolhidos com
+                critério e transparência.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="escolha-luce">
+
+    <div class="container">
+
+        <div class="titulo-central">
+
+            <h2>
+
+                Escolha da Luce
+
+            </h2>
+
+            <p>
+
+                Antes de divulgar uma oferta, analisamos o produto,
+                a reputação da loja e o custo-benefício.
+
+            </p>
+
+        </div>
+
+        <div class="vantagens-grid">
+
+            <div class="vantagem-card">
+
+                <i data-lucide="circle-check-big"></i>
+
+                <h3>
+
+                    Seleção Manual
+
+                </h3>
+
+                <p>
+
+                    Cada oferta é escolhida manualmente.
+
+                </p>
+
+            </div>
+
+            <div class="vantagem-card">
+
+                <i data-lucide="star"></i>
+
+                <h3>
+
+                    Bem Avaliados
+
+                </h3>
+
+                <p>
+
+                    Priorizamos produtos com boas avaliações.
+
+                </p>
+
+            </div>
+                        <div class="vantagem-card">
+
+                <i data-lucide="badge-percent"></i>
+
+                <h3>
+
+                    Bons Preços
+
+                </h3>
+
+                <p>
+
+                    Procuramos ofertas com excelente custo-benefício.
+
+                </p>
+
+            </div>
+
+            <div class="vantagem-card">
+
+                <i data-lucide="shield-check"></i>
+
+                <h3>
+
+                    Transparência
+
+                </h3>
+
+                <p>
+
+                    Alguns links são de afiliados, sem custo adicional para você.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="produtos">
+
+    <div class="container">
+
+        <div class="titulo-secao">
+
+            <h2>Promoções do Dia</h2>
+
+            <a href="#">Ver todas</a>
+
+        </div>
+
+        <div class="grade-produtos">
+
+            <article class="card-produto">
+
+                <div class="imagem-produto">
+
+                    <img src="imagens/produto1.jpg" alt="Produto">
+
+                    <button class="favorito-card">
+
+                        <i data-lucide="heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="conteudo-card">
+
+                    <span class="tag-card">
+
+                        Escolha da Luce
+
+                    </span>
+
+                    <h3>
+
+                        Nome do produto
+
+                    </h3>
+
+                    <div class="avaliacao">
+
+                        <i data-lucide="star"></i>
+
+                        <span>4,9</span>
+
+                    </div>
+
+                    <div class="precos">
+
+                        <span class="preco-antigo">
+
+                            R$ 59,90
+
+                        </span>
+
+                        <span class="preco">
+
+                            R$ 39,90
+
+                        </span>
+
+                    </div>
+
+                    <p class="loja">
+
+                        Loja Oficial
+
+                    </p>
+
+                    <a href="#" class="btn-card">
+
+                        Ver detalhes
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="card-produto">
+
+                <div class="imagem-produto">
+
+                    <img src="imagens/produto2.jpg" alt="Produto">
+
+                    <button class="favorito-card">
+
+                        <i data-lucide="heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="conteudo-card">
+
+                    <span class="tag-card">
+
+                        Escolha da Luce
+
+                    </span>
+
+                    <h3>
+
+                        Nome do produto
+
+                    </h3>
+
+                    <div class="avaliacao">
+
+                        <i data-lucide="star"></i>
+
+                        <span>5,0</span>
+
+                    </div>
+
+                    <div class="precos">
+
+                        <span class="preco-antigo">
+
+                            R$ 79,90
+
+                        </span>
+
+                        <span class="preco">
+
+                            R$ 49,90
+
+                        </span>
+
+                    </div>
+
+                    <p class="loja">
+
+                        Loja Oficial
+
+                    </p>
+
+                    <a href="#" class="btn-card">
+
+                        Ver detalhes
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="card-produto">
+
+                <div class="imagem-produto">
+
+                    <img src="imagens/produto3.jpg" alt="Produto">
+
+                    <button class="favorito-card">
+
+                        <i data-lucide="heart"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="conteudo-card">
+
+                    <span class="tag-card">
+
+                        Escolha da Luce
+
+                    </span>
+
+                    <h3>
+
+                        Nome do produto
+
+                    </h3>
+
+                    <div class="avaliacao">
+
+                        <i data-lucide="star"></i>
+
+                        <span>4,8</span>
+
+                    </div>
+
+                    <div class="precos">
+
+                        <span class="preco-antigo">
+
+                            R$ 99,90
+
+                        </span>
+
+                        <span class="preco">
+
+                            R$ 69,90
+
+                        </span>
+
+                    </div>
+
+                    <p class="loja">
+
+                        Loja Oficial
+
+                    </p>
+
+                    <a href="#" class="btn-card">
+
+                        Ver detalhes
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="container footer-container">
 
         <p>
-            As melhores ofertas da Shopee reunidas em um único lugar.
+
+            Alguns links deste site são links de afiliados.
+            Caso você realize uma compra através deles,
+            poderemos receber uma pequena comissão,
+            sem custo adicional para você.
+
         </p>
 
-        <a href="#" class="botao">
-            Ver ofertas
-        </a>
+        <p>
 
-    </section>
+            © 2026 Luce Ofertas. Todos os direitos reservados.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+    lucide.createIcons();
+
+</script>
 
 </body>
 
