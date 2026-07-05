@@ -145,3 +145,25 @@ function obterParametro(nome){
 const idProduto = obterParametro("id");
 
 console.log("Produto selecionado:", idProduto);
+
+const produtoAtual = produtos.find(p => p.id == idProduto);
+
+if(produtoAtual){
+
+    const nome = document.getElementById("nomeProduto");
+
+    const preco = document.getElementById("precoProduto");
+
+    if(nome){
+
+        nome.textContent = produtoAtual.nome;
+
+    }
+
+    if(preco){
+
+        preco.textContent = produtoAtual.preco;
+
+    }
+
+}
